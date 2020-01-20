@@ -68,7 +68,10 @@ func Test(t *testing.T) {
 }
 
 func TestWithEnv(t *testing.T) {
-	os.Setenv("TOPIC_MAPPING", "source.a:target.a, source.a.1:target.a.1, source.a.2:target.a.2, foo:bar")
+	os.Setenv("TOPIC_MAPPING", `source.a:target.a, 
+											source.a.1:target.a.1, 
+											source.a.2:target.a.2, 
+											foo:bar`)
 	config, err := config.Load("../../config.json")
 	if err != nil {
 		t.Error(err)
