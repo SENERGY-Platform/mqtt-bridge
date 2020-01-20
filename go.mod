@@ -1,4 +1,4 @@
-module mqtt-bridge
+module github.com/SENERGY-Platform/mqtt-bridge
 
 go 1.13
 

@@ -1,0 +1,14 @@
+{
+  "debug":true,
+  "source_broker":"",
+  "source_user":"",
+  "source_pw":"",
+  "source_qos":2,
+  "target_broker":"",
+  "target_user":"",
+  "target_pw":"",
+  "target_qos":2,
+  "topic_mapping":{
+    "example_source_topic": "example_target_topic"
+  }
+}

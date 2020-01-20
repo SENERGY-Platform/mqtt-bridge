@@ -18,10 +18,10 @@ package worker
 
 import (
 	"context"
+	"github.com/SENERGY-Platform/mqtt-bridge/lib/config"
 	paho "github.com/eclipse/paho.mqtt.golang"
 	uuid "github.com/satori/go.uuid"
 	"log"
-	"mqtt-bridge/lib/config"
 	"sync"
 	"time"
 )

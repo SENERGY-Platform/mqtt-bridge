@@ -18,7 +18,7 @@ package worker
 
 import (
 	"context"
-	"mqtt-bridge/lib/config"
+	"github.com/SENERGY-Platform/mqtt-bridge/lib/config"
 	"sync"
 )
 
