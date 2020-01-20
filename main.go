@@ -19,9 +19,9 @@ package main
 import (
 	"context"
 	"flag"
-	"log"
 	"github.com/SENERGY-Platform/mqtt-bridge/lib/config"
 	"github.com/SENERGY-Platform/mqtt-bridge/lib/worker"
+	"log"
 	"os"
 	"os/signal"
 	"sync"

@@ -49,6 +49,9 @@ func Target(config config.Config, done sync.WaitGroup, source chan paho.Message)
 		for msg := range source {
 			targetTopic, ok := config.TopicMapping[msg.Topic()]
 			if ok {
+				if config.Debug {
+					log.Println("DEBUG: send", targetTopic, string(msg.Payload()))
+				}
 				token := client.Publish(targetTopic, byte(config.TargetQos), false, msg.Payload())
 				if token.Wait() && token.Error() != nil {
 					log.Println("ERROR: unable to publish on target ", targetTopic, token.Error())

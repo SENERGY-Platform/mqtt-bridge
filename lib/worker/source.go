@@ -52,6 +52,9 @@ func Source(config config.Config, ctx context.Context, done sync.WaitGroup) (sin
 
 	var handler paho.MessageHandler
 	handler = func(client paho.Client, message paho.Message) {
+		if config.Debug {
+			log.Println("DEBUG: receive", message.Topic(), string(message.Payload()))
+		}
 		sink <- message
 	}
 
