@@ -12,6 +12,7 @@ RUN git log -1 --oneline > version.txt
 FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /go/src/app/app .
+COPY --from=builder /go/src/app/config.json .
 COPY --from=builder /go/src/app/version.txt .
 
 EXPOSE 8080
